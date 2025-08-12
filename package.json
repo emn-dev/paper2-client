@@ -1,0 +1,16 @@
+{
+  "name": "paper2-client",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": " node index.js",
+    "start-paperjs": " node index-paperjs.js"
+  },
+  "dependencies": {
+    "paper": "latest",
+    "paper2": "latest"
+  },
+  "devDependencies": {
+    "jsdom": "^20.0.3"
+  }
+}
