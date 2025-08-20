@@ -1,4 +1,7 @@
 // NOTE: this will not run as-is, one way to make it work is to add node-canvas, e.g. `npm i -D canvas`
+// OR you can uncomment these 2 imports:
+// import "./jsdom-setup.js";
+// import "./canvas-mock.js";
 import paper from "paper/dist/paper-core.js";
 
 const mySvg = `

@@ -1,4 +1,4 @@
-if (typeof window !== "undefined") {
+if (globalThis.window) {
   const canvasCxtFunctText =
     window.HTMLCanvasElement.prototype.getContext.toString();
 

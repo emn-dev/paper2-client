@@ -1,9 +1,16 @@
 // import { Canvas } from "canvas";
 import { JSDOM } from "jsdom";
 
-const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+if (globalThis.process?.release?.name) {
+  console.log("We are running in NodeJS");
+  const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
 
-global.window = dom.window;
-global.document = dom.window.document;
-global.self = dom.window;
-// global.window.HTMLCanvasElement = Canvas;
+  globalThis.window = dom.window;
+  globalThis.document = dom.window.document;
+  globalThis.self = dom.window.self;
+  globalThis.navigator = dom.window.navigator;
+
+  // global.window.HTMLCanvasElement = Canvas;
+} else {
+  console.log("Unknown runtime!");
+}
