@@ -4,13 +4,14 @@
   "type": "module",
   "scripts": {
     "start": " node index.js",
-    "start-paperjs": " node index-paperjs.js"
+    "start-paperjs": "node index-paperjs.js"
   },
   "dependencies": {
     "paper": "0.12.18",
-    "paper2": "1.0.50"
+    "paper2": "1.0.52"
   },
   "devDependencies": {
-    "jsdom": "^20.0.3"
+    "canvas": "^3.1.2",
+    "jsdom": "^26.1.0"
   }
 }
