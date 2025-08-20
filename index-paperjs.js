@@ -1,3 +1,4 @@
+// NOTE: this will not run as-is, one way to make it work is to add node-canvas, e.g. `npm i -D canvas`
 import paper from "paper/dist/paper-core.js";
 
 const mySvg = `
