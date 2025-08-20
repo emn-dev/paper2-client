@@ -8,10 +8,9 @@
   },
   "dependencies": {
     "paper": "0.12.18",
-    "paper2": "1.0.52"
+    "paper2": "^1.0.56"
   },
   "devDependencies": {
-    "canvas": "^3.1.2",
     "jsdom": "^26.1.0"
   }
 }

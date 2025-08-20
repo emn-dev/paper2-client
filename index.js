@@ -1,12 +1,7 @@
-import { initialize } from "paper2";
+import "./jsdom-setup.js";
+import { paper, Project, Size, Path, Layer } from "paper2";
 
-async function main() {
-  const { paper, env, jsdom, nodeCanvas } = await initialize();
-  console.log("env =====", env);
-  console.log("jsdom =====", jsdom);
-  console.log("nodeCanvas =====", nodeCanvas);
-
-  const mySvg = `
+const mySvg = `
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10cm" height="30.48cm" viewBox="0 0 10 30.48">
     <g id="export">
         <g id="foo">
@@ -18,35 +13,32 @@ async function main() {
   </svg>
   `;
 
-  const proj = new paper.Project(new paper.Size(1, 1));
+const proj = new Project(new Size(1, 1));
 
-  console.log("----- CODE_BLOCK_1 -----");
+console.log("----- CODE_BLOCK_1 -----");
 
-  try {
-    const layer = proj.importSVG(mySvg); // Cannot do without JSDOM
-    const items = layer.children["export"].getItems({ recursive: true });
-    items.forEach((item) => {
-      console.log(item.className, item.name);
-    });
-  } catch {
-    console.log("CANNOT run this code without JSDOM");
-  }
-
-  console.log("----- CODE_BLOCK_2 -----");
-
-  // This works with or without JSDOM
-  const path = new paper.Path([100, 100], [100, 200]);
-  path.name = "foo2";
-  const path2 = new paper.Path([50, 150], [150, 150]);
-  path2.name = "bar2";
-  const layer2 = new paper.Layer({
-    children: [path, path2],
-    strokeColor: "black",
-    position: paper.view.center,
-  });
-  layer2.children.forEach((item) => {
+try {
+  const layer = proj.importSVG(mySvg); // Cannot do without JSDOM
+  const items = layer.children["export"].getItems({ recursive: true });
+  items.forEach((item) => {
     console.log(item.className, item.name);
   });
+} catch {
+  console.log("CANNOT run this code without JSDOM");
 }
 
-main().finally(() => process.exit());
+console.log("----- CODE_BLOCK_2 -----");
+
+// This works with or without JSDOM
+const path = new Path([100, 100], [100, 200]);
+path.name = "foo2";
+const path2 = new Path([50, 150], [150, 150]);
+path2.name = "bar2";
+const layer2 = new Layer({
+  children: [path, path2],
+  strokeColor: "black",
+  position: paper.view.center,
+});
+layer2.children.forEach((item) => {
+  console.log(item.className, item.name);
+});
