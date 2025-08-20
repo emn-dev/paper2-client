@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": " node index.js",
+    "start": "node index.js",
     "start-paperjs": "node index-paperjs.js"
   },
   "dependencies": {
