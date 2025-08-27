@@ -1,5 +1,4 @@
-import "./jsdom-setup.js";
-import "./canvas-mock.js";
+import "paper2/jsdom-setup.esm.js";
 import { paper, Project, Size, Path, Layer } from "paper2";
 
 const mySvg = `
