@@ -1,6 +1,5 @@
-// NOTE: this will not run as-is, one way to make it work is to add node-canvas, e.g. `npm i -D canvas`
-// OR you can uncomment this import:
-// import "paper2/jsdom-setup.js";
+// NOTE: this will not run as-is, to fix you can uncomment this import:
+// import "paper2/jsdom-setup.js"; // This creates a Window environment using jsdom
 import paper from "paper/dist/paper-core.js";
 
 const mySvg = `
