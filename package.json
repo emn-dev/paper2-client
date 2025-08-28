@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "paper": "0.12.18",
-    "paper2": "1.0.87"
+    "paper2": "1.0.88"
   },
   "devDependencies": {
     "jsdom": "^26.1.0"

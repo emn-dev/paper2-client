@@ -12,8 +12,3 @@ Testing client for [paper2](https://github.com/emn-dev/paper2). Easy place to im
 
 - Testing paper2 = `npm start`
 - Testing paperjs (original) = `npm run start-paperjs`
-
-## jsdom
-
-- jsdom in this project is stuck at `v20.0.3` because of a bug in [paperjs - 2058](https://github.com/paperjs/paper.js/pull/2058)
-- You can bump jsdom to latest and paper2 will work correctly, but paperjs will throw error
