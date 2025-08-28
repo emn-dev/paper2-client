@@ -1,5 +1,5 @@
-import "paper2/jsdom-setup.esm.js";
-import { paper, Project, Size, Path, Layer } from "paper2";
+import "paper2/jsdom-setup.js";
+import { paper, Project, Size, Path, Layer } from "paper2/paper2-core.js";
 
 const mySvg = `
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10cm" height="30.48cm" viewBox="0 0 10 30.48">
