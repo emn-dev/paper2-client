@@ -1,6 +1,5 @@
 // Uncomment this to fix CODE_BLOCK_1
 // import "paper2/jsdom-setup.js"; // This creates a Window environment using jsdom
-// import { paper } from 'paper2'; // Full (contains Paperscript)
 import { paper, Project, Size, Path, Layer } from "paper2/paper2-core.js"; // Core
 
 const mySvg = `
